@@ -39,20 +39,14 @@ button.IconButton {
     margin: 4px;
 }
 
-img.Icon {
-    height: 22px;
-    width: 22px;
-    filter: invert(6%) sepia(97%) saturate(2121%) hue-rotate(209deg) brightness(91%) contrast(106%);
-}
-img.ProfilePicture {
+img {
     border-radius: 10px;
+}
+img.Icon {
+    filter: invert(6%) sepia(97%) saturate(2121%) hue-rotate(209deg) brightness(91%) contrast(106%);
 }
 img.ProfilePicture:hover {
     filter: brightness(80%) contrast(80%) saturate(50%);
-}
-
-img.LogoMedium {
-    border-radius: 10px;
 }
 
 header {
@@ -63,7 +57,6 @@ header {
     height: 50px;
     background-color: white;
     border-bottom: black 1px solid;
-    margin-bottom: 80px;
     box-shadow: 0px 2px 4px 4px #00000020;
 }
 header > div {
@@ -90,12 +83,26 @@ header button {
     }
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #C0C1DB;
+    border-bottom: black 1px solid;
+    box-shadow: 0px 2px 4px 4px #00000020;
+}
+nav > div {
+    margin: 8px;
+}
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
+    margin-top: 80px;
 }
 .SectionLogo {
     display: flex;
@@ -243,4 +250,65 @@ footer a {
     background: white;
     box-shadow: 0px 2px 4px 4px #00000020;
     border-radius: 10px;
+}
+#ResultSection > div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.ResultElement {
+    display: flex;
+    flex-direction: row;
+    border-radius:  10px;
+    margin: 16px;
+    border: 1px solid black;
+    overflow: hidden;
+    height: 128px;
+ }
+.ResultElement > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.ResultElement > div:nth-child(1){
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
+    align-self: center;
+ }
+.ResultElement h2{
+    margin: 4px;
+    width: 100%;
+}
+.ResultElement p{
+    margin: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+}
+.ResultElement .Icon {
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    #ResultSection > div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 2048px) {
+    #ResultSection > div {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 96%;
+    }
+}
+@media (min-width: 3000px) {
+    #ResultSection > div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
