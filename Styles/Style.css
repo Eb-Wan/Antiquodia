@@ -1,11 +1,3 @@
-body {
-  color: #011033;
-  margin: 0px;
-  padding: 0px;
-  background: linear-gradient(0deg, #7275B3 0%, #BEC1FF 100%);
-  background-repeat: no-repeat;
-}
-
 a {
   text-decoration: underline;
 }
@@ -28,7 +20,7 @@ button.iconbutton {
 }
 
 button:hover {
-  background: #D5D6F1;
+  background: radial-gradient(circle, #D5D6F1 0%, #FFFFFF 100%);
   cursor: pointer;
 }
 
@@ -58,14 +50,21 @@ section {
   width: 100%;
 }
 
+body {
+  color: #011033;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(0deg, #7275B3 0%, #BEC1FF 100%);
+  background-repeat: no-repeat;
+}
+
 .mainheader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: white;
-  border-bottom: black 1px solid;
+  background-color: #FFFFFF;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
 .mainheader__container {
@@ -94,11 +93,9 @@ nav {
   align-items: center;
   height: 40px;
   background-color: #C0C1DB;
-  border-bottom: black 1px solid;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
-
-nav > div {
+nav div {
   margin: 8px;
 }
 
@@ -107,16 +104,16 @@ main {
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
-.LogoLargeImg {
+.logolargeimg {
   border-radius: 10px;
-  width: 80%;
+  width: auto;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
 
-.SearchBar {
+.searchbar {
   display: flex;
   justify-content: space-between;
   background: white;
@@ -124,34 +121,23 @@ main {
   height: 40px;
   overflow: hidden;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
-  border: 1px black solid;
 }
-
-.SearchBar input {
+.searchbar__in {
   padding: 10px;
   width: 100%;
   font-size: 16px;
   border: none;
   flex: 1;
 }
-
-.SearchBar input:focus {
+.searchbar__in__:focus {
   outline: none;
 }
-
-.SearchBar input::placeholder {
+.searchbar__in__::placeholder {
   font-style: italic;
 }
-
-.SearchBar button {
-  border: none;
-  border-left: 1px black solid;
+.searchbar .iconbutton {
   border-radius: 0px;
   margin: 0px;
-}
-
-.SectionArticles > div {
-  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
 
 .article {
@@ -160,6 +146,7 @@ main {
   margin: 8px;
   border-radius: 10px;
   padding: 32px;
+  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
 
 .article:nth-child(2) {
@@ -179,10 +166,10 @@ main {
   section {
     flex-direction: row;
   }
-  .LogoLargeImg {
+  .logolargeimg {
     width: 40%;
   }
-  .SearchBar {
+  .searchbar {
     width: 40%;
   }
   .article:nth-child(2) {
@@ -201,7 +188,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid black;
+  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
   background-color: #C0C1DB;
   height: 80px;
 }
