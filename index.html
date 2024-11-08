@@ -10,30 +10,32 @@
     </head>
 
     <body>
-        <header>
-            <div>
-                <button class="HeaderNormalButton">Connexion</button>
-                <!-- <button class="IconButton"><img class="ProfilePicture" src="./Images/Favicon.png" alt="Icône Flêche" width="40px" height="40px"></button> -->
+        <header class="mainheader">
+            <div class="mainheader__container">
+                <button class="mainheader__btn">Connexion</button>
+                <!-- <button class="iconbutton"><img class="ProfilePicture" src="./Images/Favicon.png" alt="Icône Flêche" width="40px" height="40px"></button> -->
             </div>
-            <div>
-                <button class="HeaderNormalButton">Préférence</button>
-                <button class="IconButton"><img class="Icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px"></button>
+            <div class="mainheader__container">
+                <button class="mainheader__btn">Préférence</button>
+                <button class="iconbutton"><img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px"></button>
             </div>
         </header>
+
+
         <main>
-            <div class="SectionLogo">
-                <img class="LogoLargeImg" src="./Images/LogoLarge.png" alt="Logo de Antiquodia">
-            </div>
+            <section>
+                <img class="logolargeimg" src="./Images/LogoLarge.png" alt="Logo de Antiquodia">
+            </section>
 
-            <div class="SectionSearch">
-                <div class="SearchBar">
-                    <input type="text" id="SearchBarInputJS" placeholder="Rechercher...">
-                    <button class="IconButton" onclick="location.href = './Rechercher.html';"><img class="Icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
+            <section>
+                <div class="searchbar">
+                    <input type="text" class="searchbar__in" id="SearchBarInputJS" placeholder="Rechercher...">
+                    <button class="iconbutton" onclick="location.href = './Rechercher.html';"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
                 </div>
-            </div>
+            </section>
 
-            <div class="SectionArticles">
-                <div class="ElementArticle">
+            <section>
+                <div class="article">
                     <b>09/10/2024 :</b>
                     <br><br>
                     <u><b>Une nouvelle fabrique de Tube électronique vient d’ouvrir en France.</b></u>
@@ -54,14 +56,14 @@
                     <b><a href="">>>Voir</a></b>
                 </div>
 
-                <div class="ElementArticle">
+                <div class="article">
                     Antiquodia (Antique Encyclopedia), est un regroupement d’informations sur diverses objets de collections, plus spécifiquement technologiques et anciens.
                     <br><br>
                     Archives, encyclopédie, guides et forum spécialisé pour la collection d’objet ancien. En bref, c’est LA ressource pour avoir les ressources.
                     <br><br>
                 </div>
 
-                <div class="ElementArticle">
+                <div class="article">
                     <u><b>Archive :</b></u> Manuel complet d’entretien et
                     réparation Citroën 2CVAZ.
                     <br> 
@@ -79,7 +81,7 @@
                     <br>
                     <b><a href="">>>Voir</a></b>
                 </div>
-            </div>
+            </section>
 
         </main>
 
