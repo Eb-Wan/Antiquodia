@@ -14,7 +14,7 @@
         </div>
         <div class="mainheader__container">
             <!-- <button class="iconbutton"><img class="Icon" src="./Icon/person-fill.svg" alt="Icône Flêche"></button> -->
-            <button class="iconbutton"><img class="ProfilePicture" src="https://picsum.photos/id/237/40" alt="Icône Flêche" width="40px" height="40px" width="22px" height="22px"></button>
+            <button class="iconbutton"><img class="profilepicture" src="https://picsum.photos/id/237/40" alt="Icône Flêche" width="40px" height="40px" width="22px" height="22px"></button>
             <button class="iconbutton"><img class="Icon" src="./Icons/three-dots-vertical.svg" alt="Icône Flêche" width="22px" height="22px"></button>
         </div>
     </header>
@@ -29,10 +29,10 @@
         </div>
     </nav>
     <main>
-        <section id="ResultSection">
+        <section class="resultsection">
             <h1>Résulats de la recherche</h1>
-            <div>
-                <div class="ResultElement">
+            <div class="resultsection__container">
+                <div class="resultsection__element">
                     <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
                     <div>
                         <h2>Lorem Ipsum</h2>
@@ -45,21 +45,7 @@
                         <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
                     </div>
                 </div>
-
-                <div class="ResultElement">
-                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
-                    <div>
-                        <h2>Lorem Ipsum</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
-                        </p>
-                    </div><div>
-                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
-                        <img class="Icon" src="./Icons/rulers.svg" alt="placeholder" width="32px" height="32px">
-                    </div>
-                </div>
-
-                <div class="ResultElement">
+                <div class="resultsection__element">
                     <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
                     <div>
                         <h2>Lorem Ipsum</h2>
@@ -69,11 +55,10 @@
                     </div>
                     <div>
                         <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
-                        <img class="Icon" src="./Icons/chat-left-text-fill.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
                     </div>
                 </div>
-
-                <div class="ResultElement">
+                <div class="resultsection__element">
                     <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
                     <div>
                         <h2>Lorem Ipsum</h2>
@@ -83,11 +68,10 @@
                     </div>
                     <div>
                         <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
-                        <img class="Icon" src="./Icons/archive-fill.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
                     </div>
                 </div>
-
-                <div class="ResultElement">
+                <div class="resultsection__element">
                     <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
                     <div>
                         <h2>Lorem Ipsum</h2>
@@ -97,20 +81,34 @@
                     </div>
                     <div>
                         <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
-                        <img class="Icon" src="./Icons/newspaper.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
                     </div>
                 </div>
-            </div>
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                
+
         </section>
 
     </main>
-    <footer>
-        <div>
-            <a href="">Confidentialité</a>
-            <a href="">Mentions Légales</a>
+    <footer class="footer">
+        <div class="footer__container">
+            <a class="footer__link" href="">Confidentialité</a>
+            <a class="footer__link" href="">Mentions Légales</a>
         </div>
-        <div>
-            <img class="LogoFooter" src="./Images/LogoMediumNoBg.png" alt="Logo de Antiquodia" width="auto" height="40px">
+        <div class="footer__container">
+            <img class="footer__logo" src="./Images/LogoMediumNoBg.png" alt="Logo de Antiquodia" width="auto" height="40px">
         </div>
     </footer>
 </body>

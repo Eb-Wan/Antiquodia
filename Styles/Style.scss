@@ -34,11 +34,11 @@ img {
 img.icon {
     filter: invert(6%) sepia(97%) saturate(2121%) hue-rotate(209deg) brightness(91%) contrast(106%);
 }
-img.profilepicrture:hover {
+img.profilepicture:hover {
     filter: brightness(80%) contrast(80%) saturate(50%);
 }
 
-section {
+.frontpagesection  {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -159,7 +159,7 @@ main {
 
 
 @media (min-width: 768px) {
-    section {
+    .frontpagesection {
         flex-direction: row;
     }
 
@@ -182,7 +182,7 @@ main {
     }
 }
 
-footer {
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -191,42 +191,44 @@ footer {
     box-shadow: 0px 2px 4px 4px $ShadowColor;
     background-color: $Color3;
     height: 80px;
+
+    &__container {
+        width: 50%;
+        margin: 16px;
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+        &:last-child {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            
+        }
+    }
+   
+    &__link {
+        font-family: sans-serif;
+        font-weight: normal;
+        margin: 8px;
+    }
 }
-footer div {
-    width: 50%;
-    margin: 16px;
-}
-footer > :nth-child(1) {
-    display: flex;
-    flex-direction: column;
-}
-footer > :nth-child(2){
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    
-}
-footer a {
-    font-family: sans-serif;
-    font-weight: normal;
-    margin: 8px;
-}
+
 
 @media (min-width: 768px) {
-    footer {
+    .footer {
         height: 60px;
-    }
-    footer > :nth-child(1) {
-        flex-direction: row;
-    }
-    footer div {
-        width: 50%;
-        margin: 32px;
+        &__container {
+            margin: 32px;
+            &:first-child {
+                flex-direction: row;
+            }
+        }
     }
 }
 
-#ResultSection {
+.resultsection {
     margin: auto;
     margin-bottom: 50px;
     width: 96%;
@@ -234,65 +236,70 @@ footer a {
     background: white;
     box-shadow: 0px 2px 4px 4px #00000020;
     border-radius: 10px;
-}
-#ResultSection > div {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.ResultElement {
-    display: flex;
-    flex-direction: row;
-    border-radius:  10px;
-    margin: 16px;
-    border: 1px solid black;
-    overflow: hidden;
-    height: 128px;
- }
-.ResultElement > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-}
-.ResultElement > div:nth-child(1){
-    width: 128px;
-    height: 128px;
-    flex-shrink: 0;
-    align-self: center;
- }
-.ResultElement h2{
-    margin: 4px;
-    width: 100%;
-}
-.ResultElement p{
-    margin: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
     
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    line-clamp: 3;
-    -webkit-line-clamp: 3;
-}
-.ResultElement .Icon {
-    border-radius: 0;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: row;
+        border-radius:  10px;
+        margin: 16px;
+        border: 1px solid black;
+        overflow: hidden;
+        height: 128px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+        }
+        div:first{
+            width: 128px;
+            height: 128px;
+            flex-shrink: 0;
+            align-self: center;
+        }
+        h2{
+            margin: 4px;
+            width: 100%;
+        }
+        p{
+            margin: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            line-clamp: 3;
+            -webkit-line-clamp: 3;
+        }
+        .Icon {
+            border-radius: 0;
+        }
+     }
 }
 
+
+
 @media (min-width: 768px) {
-    #ResultSection > div {
+    .resultsection__container {
         grid-template-columns: 1fr 1fr;
     }
 }
 @media (min-width: 2048px) {
-    #ResultSection > div {
+    .resultsection__container {
         grid-template-columns: 1fr 1fr 1fr;
         width: 96%;
     }
 }
 @media (min-width: 3000px) {
-    #ResultSection > div {
+    .resultsection__container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
