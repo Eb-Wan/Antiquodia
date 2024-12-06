@@ -17,20 +17,40 @@
             </div>
             <div class="mainheader__container">
                 <button class="mainheader__btn">Préférence</button>
-                <button class="iconbutton"><img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px"></button>
+                <button class="iconbutton">
+                    <img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px">
+                </button>
             </div>
         </header>
 
 
         <main>
             <section class="frontpagesection">
-                <img class="logolargeimg" src="./Images/LogoLarge.png" alt="Logo de Antiquodia">
+                <img class="logolargeimg" src="./Images/LogoLargeColor.png" alt="Logo de Antiquodia">
             </section>
 
-            <section  class="frontpagesection">
-                <div class="searchbar">
-                    <input type="text" class="searchbar__in" id="SearchBarInputJS" placeholder="Rechercher...">
-                    <button class="iconbutton" onclick="location.href = './Rechercher.html';"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
+            <section class="frontpagesection frontpagesection--vertical">
+                <form class="searchbar searchbar--flatbottom" action="./Search.html" method="get">
+                    <input type="text" class="searchbar__in" name="s" placeholder="Rechercher...">
+                    <button class="iconbutton" type="submit"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
+                </form>
+                <div class="searchfilters searchfilters--flattop">
+                    <span class="searchfilters__text">Filtrer : </span>
+                    <select class="searchfilters__select">
+                        <option>Tout Types</option>
+                        <option>Archives</option>
+                        <option>Encyclopédie</option>
+                        <option>Forum</option>
+                        <option>Guides</option>
+                    </select>
+                    <select class="searchfilters__select">
+                        <option>Toutes Catégorie</option>
+                        <option>Électronique</option>
+                        <option>Mécanique</option>
+                        <option>Autres</option>
+                    </select class="searchfilters__select">
+                    <select class="searchfilters__select"><option>Toutes Marques</option></select>
+                    <select class="searchfilters__select"><option>Tous Modèles</option></select>
                 </div>
             </section  class="frontpagesection">
 
@@ -61,6 +81,8 @@
                     <br><br>
                     Archives, encyclopédie, guides et forum spécialisé pour la collection d’objet ancien. En bref, c’est LA ressource pour avoir les ressources.
                     <br><br>
+                    <hr>
+                    
                 </div>
 
                 <div class="article">
