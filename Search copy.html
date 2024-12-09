@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Styles/Style.css" rel="stylesheet">
+    <link href="./Images/Favicon.png" rel="icon" />
+    <title>Rechercher - Antiquodia</title>
+    <script src="./Scripts/SearchPageScript.js" defer></script>
+    <script src="./Scripts/UiHandlerScript.js" defer></script>
+</head>
+<body>
+    <header class="mainheader">
+        <div class="mainheader__container">
+            <a href="./index.html"><img class="headerlogo" src="./Images/LogoMedium.png" alt="Logo du site" width="auto" height="40px"></a>
+        </div>
+        <div class="mainheader__container">
+            <button class="iconbutton"><img class="icon" src="./Icons/person-fill.svg" alt="Icône Compte"></button>
+            <button class="iconbutton"><img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px"></button>
+        </div>
+    </header>
+    <form class="navbar" method="get">
+        <div class="navbar__container">
+            <div class="searchfilters">
+                <span id="FiltersButton" class="searchfilters__text">Filtrer : </span>
+                <div id="FiltersMenu" class="searchfilters__selects">
+                    <select name="t" class="searchfilters__select">
+                        <option value="">Tout Types</option>
+                        <option value="archive">Archives</option>
+                        <option value="encyclopedia">Encyclopédie</option>
+                        <option value="forum">Forum</option>
+                        <option value="guide">Guides</option>
+                    </select>
+                    <select name="c" class="searchfilters__select">
+                        <option value="">Toutes Catégorie</option>
+                        <option value="">Électronique</option>
+                        <option value="">Mécanique</option>
+                        <option value="">Autres</option>
+                    </select>
+                    <select name="b" class="searchfilters__select"><option value="">Toutes Marques</option></select>
+                    <select name="m" class="searchfilters__select"><option value="">Tous Modèles</option></select>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__container">
+            <div class="searchbar">
+                <input type="text" name="s" placeholder="Rechercher...">
+                <button class="iconbutton" type="submit"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
+            </div>
+        </div>
+    </form>
+    <main>
+        <section id="ResultSection" class="resultsection">
+            <h1>Résulats de la recherche</h1>
+            <div class="resultsection__container">
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                <div class="resultsection__element">
+                    <div><img src="https://picsum.photos/100" alt="placeholder" width="110px" height="110px"></div>
+                    <div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a purus ac dolor vehicula egestas et vel augue. Fusce odio magna, viverra vel nisl cursus, euismod laoreet tortor. Duis in ligula a risus semper tempor et ac justo. Aliquam quis eros lobortis, dictum massa ac, dictum risus. Maecenas metus ipsum, laoreet non neque cursus, sollicitudin accumsan nunc. Etiam sodales mattis luctus. Nullam vel odio magna. Nullam vestibulum vel tellus ullamcorper malesuada. In eleifend magna neque, et vulputate nisl egestas at.
+                        </p>
+                    </div>
+                    <div>
+                        <img class="Icon" src="./Icons/bookmark-plus.svg" alt="placeholder" width="32px" height="32px">
+                        <img class="Icon" src="./Icons/file-earmark-richtext-fill.svg" alt="placeholder" width="32px" height="32px">
+                    </div>
+                </div>
+                
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <a class="footer__link" href="">Confidentialité</a>
+            <a class="footer__link" href="">Mentions Légales</a>
+        </div>
+        <div class="footer__container">
+            <img class="footer__logo" src="./Images/LogoMediumNoBg.png" alt="Logo de Antiquodia" width="auto" height="40px">
+        </div>
+    </footer>
+</body>
+</html>
