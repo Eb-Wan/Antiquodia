@@ -2,7 +2,7 @@ a {
   text-decoration: underline;
 }
 
-button {
+button, .linkbutton {
   margin: 4px;
   height: 40px;
   font-size: 1em;
@@ -10,6 +10,27 @@ button {
   border-radius: 10px;
   border: none;
   background: #FFFFFF;
+}
+button:hover, .linkbutton:hover {
+  background-color: #D5D6F1;
+  cursor: pointer;
+}
+button:active, .linkbutton:active {
+  background: radial-gradient(circle, #D5D6F1 0%, #FFFFFF 100%);
+}
+button:disabled, .linkbutton:disabled {
+  background-color: #C0C1DB;
+  cursor: not-allowed;
+}
+
+.linkbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #011033;
+  padding: 1px 8px 1px 8px;
 }
 
 button.iconbutton {
@@ -19,26 +40,12 @@ button.iconbutton {
   width: 40px;
 }
 
-button:hover {
-  background-color: #D5D6F1;
-  cursor: pointer;
-}
-
-button:active {
-  background: radial-gradient(circle, #D5D6F1 0%, #FFFFFF 100%);
-}
-
-button:disabled {
-  background-color: #C0C1DB;
-  cursor: not-allowed;
-}
-
 input {
   padding: 10px;
   font-size: 1.2em;
   border: none;
   border-radius: 10px;
-  height: 30px;
+  height: 40px;
   box-sizing: border-box;
   min-width: 40px;
 }
@@ -64,12 +71,10 @@ select {
 select option {
   background-color: #FFFFFF;
 }
-
 select:hover {
   background-color: #D5D6F1;
   cursor: pointer;
 }
-
 select:active {
   background: radial-gradient(circle, #D5D6F1 0%, #FFFFFF 100%);
 }
@@ -89,6 +94,11 @@ img.profilepicture:hover {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
   color: #011033;
   margin: 0px;
   padding: 0px;
@@ -97,21 +107,28 @@ body {
 }
 
 main {
+  width: 100vw;
   margin: auto;
   margin-top: 50px;
-  min-height: 80vh;
 }
 
 section {
+  width: 100%;
   box-sizing: border-box;
 }
 
+.boxshadow {
+  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
+}
+
 .mainheader {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  width: 100vw;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
@@ -124,6 +141,49 @@ section {
 }
 .mainheader__btn {
   width: 100%;
+}
+
+.connection {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+  margin: 80px auto 80px auto;
+  padding: 20px 40px 80px 40px;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: sans-serif;
+}
+.connection__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.connection__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.connection h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.connection form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.connection input {
+  border: #000000 1px solid;
+}
+.connection button {
+  margin: auto;
+  color: #FFFFFF;
+  background-color: #7275B3;
+  width: 200px;
+}
+.connection button:hover {
+  background-color: #505080;
 }
 
 @media (min-width: 900px) {
@@ -140,6 +200,7 @@ section {
   align-items: center;
   background-color: #C0C1DB;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
+  width: 100vw;
   height: 50px;
   gap: 10px;
 }
@@ -210,9 +271,6 @@ section {
   height: 40px;
   padding: 0 10px 0 10px;
   box-sizing: border-box;
-}
-.searchfilters--boxshadow {
-  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
 }
 .searchfilters--flattop {
   border-radius: 0 0 10px 10px;
@@ -343,6 +401,7 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1254901961);
   background-color: #C0C1DB;
   height: 80px;
@@ -459,4 +518,19 @@ section {
   .resultsection__container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+.menu__title {
+  font-family: sans-serif;
+  padding: 15px 30px 15px 30px;
+  border-bottom: #000000 1px solid;
+  text-align: center;
 }/*# sourceMappingURL=Style.css.map */

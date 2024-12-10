@@ -3,16 +3,16 @@ const SmallWidth = 900;
 const FiltersBtn = document.getElementById("FiltersButton");
 const FiltersMenu = document.getElementById("FiltersMenu");
 
-
 /*
     Ceci est une classe qui permet la gestion des menus.
-    Menu(OpenButton, Menu, ForSmallDevices)
+    Menu(OpenButton, Menu, WidthBehaviour)
 
     OpenButton = L'élément HTML qui activera le menu.
 
     Menu = L'élément HTML qui sera le menu.
 
-    WidthBehaviour = String (par défaut false) qui défini si le menu doit 
+    WidthBehaviour = String (par défaut false) qui défini comment le menu va
+    agir selon différentes résolutions d'écran
     Si WidthBehaviour = "DisplaySmall" le menu sera uniquement visible sur les
     appareils.
     Mais si WidthBehaviour = "LockLarge" le menu sera toujours visible sur les grands appareils,
@@ -30,8 +30,9 @@ class Menu {
     }
     Initialize() {
         if (this.WidthBehaviour != false) {
+            //Si un WidthBehaviour a été défini
             window.addEventListener("resize", () => this.UpdateToScreen());
-            this.UpdateToScreen()
+            this.UpdateToScreen();
         }
 
         if (this.OpenButton != undefined && this.Menu != undefined) {
@@ -58,9 +59,11 @@ class Menu {
     }
     UpdateToScreen() {
         if (window.innerWidth < SmallWidth) {
+            //Si la taille est plus petite que le breakpoint SmallWidth, on active le menu et le cache.
             this.Enabled = true;
             this.ChangeState(false);
         } else {
+            //Sinon selon le comportement désiré, on affiche ou non le menu. Et après on le désactive.
             if (this.WidthBehaviour == "DisplaySmall") this.ChangeState(false);
             else if (this.WidthBehaviour == "LockLarge") this.ChangeState(true);
             this.Enabled = false;
@@ -68,100 +71,84 @@ class Menu {
     }
 }
 
-class Pagination {
-    constructor (TotalLength, StartPage, PageLength, CallBack) {
-        this.TotalLength = TotalLength;
-        this.CurrentPage = StartPage;
-        this.PageLength = PageLength;
-        this.CallBack = CallBack;
-        if (TotalLength > 0 && CallBack != undefined) this.Initialize();
-    }
-    Initialize() {
-        this.LastPage = Math.ceil(this.TotalLength / this.PageLength);
-        const ResultSection = document.getElementById("ResultSection");
-        if (ResultSection == undefined) return;
-        let PaginationDiv = document.createElement("div");
-        PaginationDiv.className = "pagination";
-        PaginationDiv.appendChild(this.CreatePrevious());
-        PaginationDiv.appendChild(this.CreateInput());
-        PaginationDiv.appendChild(this.CreateTotal());
-        PaginationDiv.appendChild(this.CreateNext());
-        ResultSection.appendChild(PaginationDiv);
-        this.ChangePage();
-    }
-    CreatePrevious() {
-        let Element = document.createElement("button");
-        Element.className = "iconbutton";
-        Element.id = "PaginationPrevious";
-        Element.innerHTML = `<img class="icon" src="./Icons/caret-left-fill.svg" alt="Page précédente"></img>`;
-        Element.addEventListener("click", () => this.PageButton(-1));
-        return Element;
-    }
-    CreateInput() {
-        let Element = document.createElement("input");
-        Element.className = "pagination__input";
-        Element.id = "PaginationInput";
-        Element.type = "number";
-        Element.name = "PaginationInput";
-        Element.value = this.CurrentPage;
-        Element.min = 1;
-        Element.addEventListener("keyup", (e) => this.PageInput(e));
-        return Element;
-    }
-    CreateTotal() {
-        let Element = document.createElement("span");
-        Element.className = "pagination__total";
-        Element.innerHTML = "/ " + this.LastPage;
-        return Element;
-    }
-    CreateNext() {
-        let Element = document.createElement("button");
-        Element.className = "iconbutton";
-        Element.id = "PaginationNext";
-        Element.innerHTML = `<img class="icon" src="./Icons/caret-right-fill.svg" alt="Page suivante"></img>`;
-        Element.addEventListener("click", () => this.PageButton(1));
-        return Element;
-    }
-    PageInput (event) {
-        if (event.key != "Enter" && event.key != "ArrowUp" && event.key != "ArrowDown") return;
-        let Value = event.target.value;
-        if (Value < 1) {
-            event.target.value = 1;
-        } else if (Value > this.LastPage) {
-            event.target.value = this.LastPage;
-        } else {
-            this.ChangePage(Value);
-        }
-    }
-    PageButton(Direction) {
-        let Value = this.CurrentPage + Direction;
-        if (Value < 1) {
-            Value = 1;
-        } else if (Value > this.LastPage) {
-            Value = this.LastPage;
-        }
-        this.ChangePage(Value);
-    }
-    ChangePage(Value = 1) {
-        if (Value <= 1) {
-            document.getElementById("PaginationPrevious").disabled = true;
-            document.getElementById("PaginationNext").disabled = false;
-        } else if (Value >= this.LastPage) {
-            document.getElementById("PaginationPrevious").disabled = false;
-            document.getElementById("PaginationNext").disabled = true;
-        } else {
-            document.getElementById("PaginationPrevious").disabled = false;
-            document.getElementById("PaginationNext").disabled = false;
-        }
-        document.getElementById("PaginationInput").value = Value;
 
-        this.CurrentPage = Value;
-        let Start = (Value - 1) * this.PageLength;
-        this.CallBack(Start, Start + this.PageLength);
+/*
+    Ceci est une classe qui gère le header. Elle verifie si l'utilisateur est connecté.
+    Si oui, le header qui sera ajouté est le AccountHeader avec pour le moment, un menu qui contient un bouton de déconnection
+    Si non, le header sera GestUser
+*/
+class Header {
+    constructor() {
+        this.Account = JSON.parse(localStorage.getItem("AntiquodiaAccount"));
+        this.IsConnected = (this.Account) ? true : false;
+        this.HtmlBody = document.querySelector("body");
+        this.DisplayHeader();
+    }
+    DisplayHeader() {
+        if (!this.HtmlBody) return;
+        if (this.IsConnected) this.AccountHeader();
+        else this.GestHeader();
+    }
+    AccountHeader() {
+        let AccountButton = this.CreateButton("iconbutton", `<img class="icon" src="./Icons/person-fill.svg" alt="Icône Compte">`)
+        let AccountMenu = this.CreateAccountMenu();
+        const AccountMenuInst = new Menu(AccountButton, AccountMenu, false); //Cette classe va gérer le menu (afficher/cacher)
+
+        let Header = document.createElement("header");
+        Header.className = "mainheader";
+        Header.innerHTML = `
+            <div class="mainheader__container">
+                <a href="./index.html"><img class="headerlogo" src="./Images/LogoMedium.webp" alt="Logo du site" width="auto" height="40px"></a>
+            </div>
+        `;
+
+        let HeaderTools = document.createElement("div");
+        HeaderTools.className = "mainheader__container";
+
+        HeaderTools.appendChild(AccountButton);
+        HeaderTools.appendChild(AccountMenu);
+        HeaderTools.appendChild(this.CreateButton("iconbutton", `<img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu">`, this.PlaceHolder));
+        
+        Header.appendChild(HeaderTools);
+        this.HtmlBody.prepend(Header);
+    }
+    GestHeader() {
+        let Header = document.createElement("header");
+        Header.className = "mainheader";
+
+        Header.innerHTML = `
+            <div class="mainheader__container">
+                <a href="./index.html"><img class="headerlogo" src="./Images/LogoMedium.webp" alt="Logo du site" width="auto" height="40px"></a>
+            </div>
+            <div class="mainheader__container">
+                <a class="linkbutton mainheader__btn" href="/Login.html">Connexion</a>
+                <button class="iconbutton"><img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px"></button>
+            </div>
+        `;
+
+        this.HtmlBody.prepend(Header);
+    }
+    CreateButton (Class, Contents, CallBack) {
+        let NewButton = document.createElement("button");
+        NewButton.className = Class;
+        NewButton.innerHTML = Contents;
+        if (CallBack) NewButton.addEventListener("click", (e) => CallBack(e));
+        return NewButton;
+    }
+    CreateAccountMenu() {
+        let NewMenu = document.createElement("div");
+        NewMenu.className = "menu boxshadow";
+        NewMenu.style = "visibility: hidden;";
+        NewMenu.innerHTML = `
+            <span class="menu__title">Bienvenue ${this.Account.Name} !</span>
+            <a class="linkbutton" href="/Deconnect.html">Déconnexion</a>
+        `;
+        return NewMenu;
+    }
+    PlaceHolder() {
+        console.log("This method does nothing. It's just here as a placeholder.")
     }
 }
 
-
 const FiltersMenuInstance = new Menu(FiltersBtn, FiltersMenu, "LockLarge");
-// const HeaderMenuInstance = new Menu(, , false);
-export {Pagination};
+const HeaderInstance = new Header();

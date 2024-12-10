@@ -1,0 +1,38 @@
+[
+        {
+            "Name": "Ewan",
+            "Email": "ewan@email.com",
+            "Password": "1251"
+        },
+        {
+            "Name": "Mélissa",
+            "Email": "melissa@email.com",
+            "Password": "Mel"
+        },
+        {
+            "Name": "Connor",
+            "Email": "connor@email.com",
+            "Password": "Surf"
+        },
+        {
+            "Name": "Daniel",
+            "Email": "daniel@email.com",
+            "Password": "Le Lundi"
+        },
+        {
+            "Name": "Thomas",
+            "Email": "thomas@email.com",
+            "Password": "C3CI eSt UN md p@223 de h@cker &/\\ H4H4H4H4"
+        },
+        {
+            "Name": "Maxime",
+            "Email": "maxime@email.com",
+            "Password": "Ouais"
+        }
+        ,
+        {
+            "Name": "Soukaina",
+            "Email": "soukaina@email.com",
+            "Password": "Jsp quoi mettre"
+        }
+]

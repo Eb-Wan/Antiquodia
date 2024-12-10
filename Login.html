@@ -1,0 +1,42 @@
+<!DOCTYPE Html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./Styles/Style.css" rel="stylesheet">
+        <link href="./Images/Favicon.icon" rel="ico" />
+        <title>Connexion - Antiquodia</title>
+        <script src="./Scripts/LoginPageScript.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <section class="connection">
+                <h1>Se connecter</h1>
+                <form id="LoginFormId" method="post">
+                    <div class="connection__container">
+                        <label for="EmailInput">Adresse Email :</label>
+                        <input id="EmailInput" type="email" name="EmailInput" placeholder="adresse@example.com">
+                    </div>
+                    <div class="connection__container">
+                        <label for="PaswordInput">Mot de passe :</label>
+                        <input id="PaswordInput" type="password" name="PasswordInput" required placeholder="Mot de passe">
+                    </div>
+                    <button type="submit">Se connecter</button>
+                </form>
+                <a class="connection__link" href="./Login.html">Vous avez oublié votre mot de passe ?</a>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <a class="footer__link" href="">Confidentialité</a>
+                <a class="footer__link" href="">Mentions Légales</a>
+            </div>
+            <div class="footer__container">
+                <img class="footer__logo" src="./Images/LogoColorTransparent.webp" alt="Logo de Antiquodia" width="auto" height="40px">
+            </div>
+        </footer>
+    </body>
+</html>

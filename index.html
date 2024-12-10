@@ -5,54 +5,40 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./Styles/Style.css" rel="stylesheet">
-        <link href="./Images/Favicon.png" rel="icon" />
+        <link href="./Images/Favicon.ico" rel="icon" />
         <title>Accueil - Antiquodia</title>
         <script src="./Scripts/UiHandlerScript.js" type="module" defer ></script>
     </head>
 
     <body>
-        <header class="mainheader">
-            <div class="mainheader__container">
-                <button class="mainheader__btn">Connexion</button>
-                <!-- <button class="iconbutton"><img class="profilepicture" src="./Images/Favicon.png" alt="Icône Flêche" width="40px" height="40px"></button> -->
-            </div>
-            <div class="mainheader__container">
-                <button class="mainheader__btn">Préférences</button>
-                <button class="iconbutton">
-                    <img class="icon" src="./Icons/three-dots-vertical.svg" alt="Icône Menu" width="22px" height="22px">
-                </button>
-            </div>
-        </header>
-
-
         <main>
             <section class="frontpagesection">
-                <img class="logolargeimg" src="./Images/LogoLargeColor.png" alt="Logo de Antiquodia">
+                <img class="logolargeimg" src="./Images/LogoLargeColor.webp" alt="Logo de Antiquodia">
             </section>
 
             <form class="frontpagesection frontpagesection--vertical" action="./Search.html" method="get">
-                <div class="searchbar searchbar--flatbottom searchbar--boxshadow">
-                    <input type="text" name="s" placeholder="Rechercher...">
+                <div class="searchbar searchbar--flatbottom boxshadow">
+                    <input type="text" name="search" placeholder="Rechercher...">
                     <button class="iconbutton" type="submit"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
                 </div>
-                <div class="searchfilters searchfilters--flattop searchfilters--boxshadow">
+                <div class="searchfilters searchfilters--flattop boxshadow">
                     <span id="FiltersButton" class="searchfilters__text">Filtrer : </span>
                     <div id="FiltersMenu" class="searchfilters__selects">
-                        <select name="t" class="searchfilters__select">
+                        <select name="type" class="searchfilters__select">
                             <option value="">Tout Types</option>
                             <option value="Archive">Archives</option>
                             <option value="Encyclopedia">Encyclopédie</option>
                             <option value="post">Posts</option>
                             <option value="Guides">Guides</option>
                         </select>
-                        <select name="c" class="searchfilters__select">
+                        <select name="category" class="searchfilters__select">
                             <option value="">Toutes Catégorie</option>
                             <option value="">Électronique</option>
                             <option value="">Mécanique</option>
                             <option value="">Autres</option>
                         </select>
-                        <select name="b" class="searchfilters__select"><option value="">Toutes Marques</option></select>
-                        <select name="m" class="searchfilters__select"><option value="">Tous Modèles</option></select>
+                        <select name="brand" class="searchfilters__select"><option value="">Toutes Marques</option></select>
+                        <select name="model" class="searchfilters__select"><option value="">Tous Modèles</option></select>
                     </div>
                 </div>
             </form>
@@ -117,7 +103,7 @@
                 <a class="footer__link" href="">Mentions Légales</a>
             </div>
             <div class="footer__container">
-                <img class="footer__logo" src="./Images/LogoMediumNoBg.png" alt="Logo de Antiquodia" width="auto" height="40px">
+                <img class="footer__logo" src="./Images/LogoColorTransparent.webp" alt="Logo de Antiquodia" width="auto" height="40px">
             </div>
         </footer>
     </body>

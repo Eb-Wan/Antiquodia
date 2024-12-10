@@ -16,7 +16,7 @@ a {
     text-decoration: underline;
 }
 
-button {
+button, .linkbutton {
     margin: 4px;
     height: 40px;
     font-size: 1em;
@@ -24,6 +24,25 @@ button {
     border-radius: 10px;
     border: none;
     background: $DefaultLightColor;
+    &:hover {
+        @include hover();
+    }
+    &:active  {
+        @include active();
+    }
+    &:disabled {
+        @include disabled();
+    }
+}
+.linkbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    text-decoration: none;
+
+    color: $TextColor;
+    padding: 1px 8px 1px 8px;
 }
 button.iconbutton {
     display: flex;
@@ -31,21 +50,13 @@ button.iconbutton {
     align-items: center;
     width: 40px;
 }
-button:hover {
-    @include hover();
-}
-button:active  {
-    @include active();
-}
-button:disabled {
-    @include disabled();
-}
+
 input {
     padding: 10px;
     font-size: 1.2em;
     border: none;
     border-radius: 10px;
-    height: 30px;
+    height: 40px;
     box-sizing: border-box;
     min-width: 40px;
     &:focus {
@@ -66,13 +77,14 @@ select {
     option {
         background-color: $DefaultLightColor;
     }
+    &:hover {
+        @include hover();
+    }
+    &:active  {
+        @include active();
+    }
 }
-select:hover {
-    @include hover();
-}
-select:active  {
-    @include active();
-}
+
 
 img {
     border-radius: 10px;
@@ -87,6 +99,11 @@ img.profilepicture:hover {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
     color: $TextColor;
     margin:0px;
     padding: 0px;
@@ -94,20 +111,27 @@ body {
     font-size: 16px;
 }
 main {
+    width: 100vw;
     margin: auto;
     margin-top: 50px;
-    min-height: 80vh;
 }
 section {
+    width: 100%;
     box-sizing: border-box;
 }
 
+.boxshadow {
+    box-shadow: 0px 2px 4px 4px $ShadowColor;
+}
+
 .mainheader {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    width: 100vw;
     background-color: $DefaultLightColor;
     box-shadow: 0px 2px 4px 4px #00000020;
     &__container {
@@ -121,7 +145,49 @@ section {
         width: 100%;
     }
 }
+.connection {
+    width: 100%;
+    max-width: 640px;
+    border-radius: 10px;
+    margin: 80px auto 80px auto;
+    padding: 20px 40px 80px 40px;
+    box-sizing: border-box;
 
+    background-color: white;
+    font-family: sans-serif;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    input {
+        border: $DefaultDarkColor 1px solid;
+    }
+    button {
+        margin: auto;
+        color: $DefaultLightColor;
+        background-color: $Color2;
+        width: 200px;
+        &:hover {
+            background-color: $Color4;
+        }
+    }
+}
 @media (min-width: 900px) {
     header > div  {
         margin: 32px;
@@ -137,6 +203,7 @@ section {
     align-items: center;
     background-color: #C0C1DB;
     box-shadow: 0px 2px 4px 4px $ShadowColor;
+    width: 100vw;
     height: 50px;
     gap: 10px;
     &__container {
@@ -206,9 +273,6 @@ section {
     height: 40px;
     padding: 0 10px 0 10px;
     box-sizing: border-box;
-    &--boxshadow {
-        box-shadow: 0px 2px 4px 4px $ShadowColor;
-    }
     &--flattop {
         border-radius: 0 0 10px 10px;
     }
@@ -341,7 +405,7 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    width: 100vw;
     box-shadow: 0px 2px 4px 4px $ShadowColor;
     background-color: $Color3;
     height: 80px;
@@ -469,5 +533,23 @@ section {
 @media (min-width: 3000px) {
     .resultsection__container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $DefaultLightColor;
+
+    border-radius: 10px;
+    &__title {
+        font-family: sans-serif;
+        padding: 15px 30px 15px 30px;
+        border-bottom: $DefaultDarkColor 1px solid;
+        text-align: center;
     }
 }
