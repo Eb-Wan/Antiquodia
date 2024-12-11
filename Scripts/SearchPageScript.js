@@ -7,11 +7,13 @@ class SearchClass {
 
         this.Url = window.location.search;
         this.UrlParams = new URLSearchParams(this.Url);
-        this.SearchValue = this.UrlParams.get("search");
-        this.TypeValue = this.UrlParams.get("type");
-        this.CategoryValue = this.UrlParams.get("category");
-        this.BrandValue = this.UrlParams.get("brand");
-        this.ModelValue = this.UrlParams.get("model");
+        
+        //Si SearchValue est pas null then SearchValue=SearchValue sinon SearchValue=""
+        this.SearchValue = (this.UrlParams.get("search")) ? this.UrlParams.get("search") : "";
+        this.TypeValue = (this.UrlParams.get("type")) ? this.UrlParams.get("type") : "";
+        this.CategoryValue = (this.UrlParams.get("category")) ? this.UrlParams.get("category") : "";
+        this.BrandValue = (this.UrlParams.get("brand")) ? this.UrlParams.get("brand") : "";
+        this.ModelValue = (this.UrlParams.get("model")) ? this.UrlParams.get("model") : "";
         
         this.Pagination;
 
@@ -33,7 +35,7 @@ class SearchClass {
         });
         
         if (this.FilteredList.length == 0) {
-            document.getElementById("ResultSectionContainer").innerHTML = "<h2>Aucun résultats</h2>";
+            document.getElementById("ResultSectionContainer").innerHTML = "<h2>Aucun résultat</h2>";
             return;
         }
 
@@ -42,7 +44,7 @@ class SearchClass {
         //cette instance de classe, pour mettre à jour la page.
         //Pagination (La quantité d'éléments, Page de départ, éléments par page, Callback)
 
-        this.Pagination = new Pagination(this.FilteredList.length, 1, 8, this.DisplayResults.bind(this));
+        this.Pagination = new PaginationClass(this.FilteredList.length, 1, 8, this.DisplayResults.bind(this));
     }
     DisplayResults(Start, End) {
         //Cette méthode affiche les résultats entre Start(inclu) et End(inclu)
@@ -69,13 +71,9 @@ class ResultClass {
     GetHtml() {
         let Title = "Titre";
         let Description = "Description";
-        let Link = `/Get.html?resource=${this.ElementJson.id}`;
+        let Link = `/Resource.html?resource=${this.ElementJson.id}`;
 
         Title = this.ElementJson.title;
-        //Si la ressource est une ressource fille, le titre devient "Re :"
-        if (this.ElementJson.parent != null) {
-            Title = "Re :";
-        }
         Description = this.ElementJson.post;
 
         return `
@@ -117,7 +115,7 @@ class ResultClass {
     La fonction CallBack doit attendre deux paramètres (Start, End)
     Start = l'élement de début de page, End = l'élement de fin de page
 */
-class Pagination {
+class PaginationClass {
     constructor (TotalLength, StartPage, PageLength, CallBack) {
         this.TotalLength = TotalLength;
         this.CurrentPage = StartPage;

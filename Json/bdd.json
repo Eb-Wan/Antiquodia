@@ -27,14 +27,24 @@
         "type": "guide",
         "title": "Vaporisateur Lampe pression réparation 101.",
         "by": { "id": "8", "name": "Ewan" },
-        "post": "",
+        "post": "Un guide complet sur comment refaire un vaporisateur Bialadin/Vapalux/Tilley sans materiel spécial.",
         "parent": null,
         "thumbnail": "./Media/DefaultThumbnail.webp",
-        "description": "Un guide complet sur comment refaire un vaporisateur Bialadin/Vapalux/Tilley sans materiel spécial.",
         "filesPath": ["./Guides/Lighting/Flame/Comment-réparer-un-vaporisateur-Bialadin.pdf"]
     },
     {
         "id": 3,
+        "type": "news",
+        "title": "Une nouvelle fabrique de tubes électroniques en France",
+        "by": [{ "id": "44", "name": "David" }],
+        "post": "Une nouvelle usine de fabrication de tubes électroniques ouvrira prochainement à Lyon, marquant un tournant pour l'industrie électronique en France.",
+        "parent": null,
+        "upVote": 120,
+        "downVote": 5,
+        "filesPath": ["./Media/Uploaded/tubes_electroniques_france.png"]
+    },
+    {
+        "id": 4,
         "type": "post",
         "title": "Alors, j'ai un Ibm 360.",
         "by": [{ "id": "42", "name": "Mélissa" }],
@@ -45,14 +55,278 @@
         "filesPath": ["./Media/Uploaded/eb/3b/eb3b0cc908508d13be93f4d1902b6898.png"]
     },
     {
-        "id": 4,
+        "id": 5,
         "type": "post",
-        "title": "",
+        "title": "Re: Alors, j'ai un Ibm 360.",
         "by": [{ "id": "25", "name": "Thomas" }],
         "post": "Wow la dinguerie, c'est incroyable ! Mais comment t'as fait pour avoir une tel machine, et surtout dans cet état, parce que franchement, les gens on un peu trop tendance à laisser ces magnifiques machines pourrir dans un hangar à prendre la poussière, voir à les démenteler. Et puis comment t'as fait pour la ramener sans l'endomager, j'image que ça n'a pas été facile. Je suis vraiment curieux de savoir comment ce projet va évoluer car ...",
         "parent": 3,
         "upVote": 69,
         "downVote": 0,
-        "filesPath": ["./Media/Uploaded/eb/3b/eb3b0cc908508d13be93f4d1902b6898.png"]
+        "filesPath": []
+    },
+    {
+        "id": 6,
+        "type": "encyclopedia",
+        "title": "Microcontrôleur",
+        "by": [
+            { "id": "15", "name": "Sarah" }
+        ],
+        "post": "Un microcontrôleur est un circuit intégré conçu pour exécuter des tâches spécifiques dans des systèmes embarqués. Il contient un processeur, de la mémoire et des périphériques d'entrée/sortie.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Encyclopedia/Electronics/Microcontroller.html"]
+    },
+    {
+        "id": 7,
+        "type": "archive",
+        "title": "Datasheet Arduino Uno",
+        "by": [{ "id": "9", "name": "Connor" }],
+        "post": "Une archive complète de toutes les spécifications et informations concernant la carte Arduino Uno.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Archive/Electronics/Arduino/ArduinoUno.pdf"]
+    },
+    {
+        "id": 8,
+        "type": "guide",
+        "title": "Guide pour réparer un transistor défectueux",
+        "by": [{ "id": "8", "name": "Ewan" }],
+        "post": "Un guide pratique sur comment tester et réparer un transistor défectueux dans un circuit électronique.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Guides/Electronics/TransistorRepair.pdf"]
+    },
+    {
+        "id": 9,
+        "type": "news",
+        "title": "Un nouvel ordinateur quantique est lancé",
+        "by": [{ "id": "44", "name": "David" }],
+        "post": "Un nouvel ordinateur quantique a été lancé, promettant de révolutionner le traitement des données.",
+        "parent": null,
+        "upVote": 88,
+        "downVote": 4,
+        "filesPath": ["./Media/Uploaded/QuantumComputer.jpg"]
+    },
+    {
+        "id": 10,
+        "type": "post",
+        "title": "J'ai trouvé une vieille caméra Super 8 !",
+        "by": [{ "id": "45", "name": "Lucas" }],
+        "post": "Je suis tombé sur une vieille caméra Super 8 dans une brocante. Comment puis-je la restaurer et la faire fonctionner ?",
+        "parent": null,
+        "upVote": 150,
+        "downVote": 3,
+        "filesPath": ["./Media/Uploaded/super8camera.jpg"]
+    },
+    {
+        "id": 11,
+        "type": "post",
+        "title": "Re: J'ai trouvé une vieille caméra Super 8 !",
+        "by": [{ "id": "12", "name": "Alice" }],
+        "post": "Ah super, j'adore les caméras Super 8 ! Il faudrait commencer par nettoyer les mécanismes internes, puis vérifier les composants électroniques.",
+        "parent": 10,
+        "upVote": 45,
+        "downVote": 1,
+        "filesPath": []
+    },
+    {
+        "id": 12,
+        "type": "encyclopedia",
+        "title": "Récepteur radio",
+        "by": [{ "id": "18", "name": "Marcus" }],
+        "post": "Un récepteur radio est un appareil qui capte les signaux radioélectriques pour les convertir en sons ou en autres informations.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Encyclopedia/Electronics/RadioReceiver.html"]
+    },
+    {
+        "id": 13,
+        "type": "archive",
+        "title": "Toshiba T1100 Service Manual",
+        "by": [{ "id": "22", "name": "Nina" }],
+        "post": "Manuel de service pour l'ordinateur Toshiba T1100.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Archive/Computers/ToshibaT1100Manual.pdf"]
+    },
+    {
+        "id": 14,
+        "type": "guide",
+        "title": "Réparer un téléviseur CRT",
+        "by": [{ "id": "17", "name": "Martin" }],
+        "post": "Ce guide explique comment diagnostiquer et réparer un téléviseur CRT défectueux.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Guides/Repair/CRTTVRepair.pdf"]
+    },
+    {
+        "id": 15,
+        "type": "news",
+        "title": "Nouveaux progrès en intelligence artificielle",
+        "by": [{ "id": "44", "name": "David" }],
+        "post": "Une nouvelle avancée majeure en intelligence artificielle pourrait changer la manière dont les machines interagissent avec les humains.",
+        "parent": null,
+        "upVote": 97,
+        "downVote": 6,
+        "filesPath": ["./Media/Uploaded/AI_progress.png"]
+    },
+    {
+        "id": 16,
+        "type": "post",
+        "title": "Projet de réparation de vieux ordinateur Amiga",
+        "by": [{ "id": "35", "name": "Robert" }],
+        "post": "Je suis en train de restaurer un ordinateur Amiga. Des suggestions pour le processus ?",
+        "parent": null,
+        "upVote": 180,
+        "downVote": 2,
+        "filesPath": ["./Media/Uploaded/amiga_project.jpg"]
+    },
+    {
+        "id": 17,
+        "type": "post",
+        "title": "Re: Projet de réparation de vieux ordinateur Amiga",
+        "by": [{ "id": "29", "name": "Helen" }],
+        "post": "C'est génial ! Pour l'Amiga, commence par vérifier les condensateurs et les circuits imprimés pour des signes de corrosion.",
+        "parent": 16,
+        "upVote": 78,
+        "downVote": 0,
+        "filesPath": []
+    },
+    {
+        "id": 18,
+        "type": "encyclopedia",
+        "title": "Amplificateur",
+        "by": [{ "id": "19", "name": "Georges" }],
+        "post": "Un amplificateur est un dispositif électronique qui augmente l'amplitude d'un signal.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Encyclopedia/Electronics/Amplifier.html"]
+    },
+    {
+        "id": 19,
+        "type": "archive",
+        "title": "Manuel des premiers ordinateurs Apple",
+        "by": [{ "id": "21", "name": "Olivia" }],
+        "post": "Un document historique sur les premiers ordinateurs Apple, incluant des manuels et des schémas.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Archive/Computers/AppleManuals.pdf"]
+    },
+    {
+        "id": 20,
+        "type": "guide",
+        "title": "Réparation d'un ancien phonographe",
+        "by": [{ "id": "30", "name": "Julian" }],
+        "post": "Ce guide explique comment restaurer un phonographe des années 1920.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Guides/Restoration/PhonographRepair.pdf"]
+    },
+    {
+        "id": 21,
+        "type": "news",
+        "title": "Découverte d'un circuit intégré antique",
+        "by": [{ "id": "42", "name": "Mélissa" }],
+        "post": "Un chercheur a découvert un circuit intégré vieux de plusieurs décennies, qui pourrait donner un aperçu des premières avancées en électronique.",
+        "parent": null,
+        "upVote": 50,
+        "downVote": 2,
+        "filesPath": ["./Media/Uploaded/AntiqueCircuit.jpg"]
+    },
+    {
+        "id": 22,
+        "type": "post",
+        "title": "Je restaure une imprimante à bandes",
+        "by": [{ "id": "26", "name": "Paul" }],
+        "post": "Je travaille sur la restauration d'une vieille imprimante à bandes. Des conseils ?",
+        "parent": null,
+        "upVote": 120,
+        "downVote": 5,
+        "filesPath": ["./Media/Uploaded/band_printer.jpg"]
+    },
+    {
+        "id": 23,
+        "type": "post",
+        "title": "Re: Je restaure une imprimante à bandes",
+        "by": [{ "id": "33", "name": "Lina" }],
+        "post": "C'est un projet fascinant ! Assurez-vous de nettoyer les têtes de lecture et de vérifier le moteur avant de commencer à imprimer.",
+        "parent": 22,
+        "upVote": 45,
+        "downVote": 1,
+        "filesPath": []
+    },
+    {
+        "id": 24,
+        "type": "encyclopedia",
+        "title": "Modulateur/Démodulateur",
+        "by": [{ "id": "19", "name": "Georges" }],
+        "post": "Un modulateur/démodulateur (modem) est un appareil permettant de convertir les signaux numériques en signaux analogiques et vice versa.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Encyclopedia/Electronics/Modem.html"]
+    },
+    {
+        "id": 25,
+        "type": "archive",
+        "title": "Service Manual IBM 1401",
+        "by": [{ "id": "28", "name": "Liam" }],
+        "post": "Manuel de service pour l'IBM 1401, un des premiers ordinateurs à usage commercial.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Archive/Computers/IBM1401Service.pdf"]
+    },
+    {
+        "id": 26,
+        "type": "guide",
+        "title": "Réparation d'un appareil photo reflex",
+        "by": [{ "id": "7", "name": "Ewan" }],
+        "post": "Ce guide propose des étapes pour restaurer un appareil photo reflex ancien.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Guides/Restoration/ReflexCameraRepair.pdf"]
+    },
+    {
+        "id": 27,
+        "type": "news",
+        "title": "Les avancées dans la technologie des batteries",
+        "by": [{ "id": "44", "name": "David" }],
+        "post": "Des chercheurs ont fait une avancée importante dans la technologie des batteries, ce qui pourrait réduire considérablement leur coût et augmenter leur efficacité.",
+        "parent": null,
+        "upVote": 112,
+        "downVote": 7,
+        "filesPath": ["./Media/Uploaded/BatteryTech.jpg"]
+    },
+    {
+        "id": 28,
+        "type": "post",
+        "title": "Trouver une vieille radio à galène",
+        "by": [{ "id": "39", "name": "Jules" }],
+        "post": "Je suis à la recherche d'une radio à galène ancienne, où puis-je en trouver ?",
+        "parent": null,
+        "upVote": 85,
+        "downVote": 3,
+        "filesPath": []
+    },
+    {
+        "id": 29,
+        "type": "post",
+        "title": "Re: Trouver une vieille radio à galène",
+        "by": [{ "id": "20", "name": "Sophie" }],
+        "post": "Les radios à galène sont assez rares, mais vous pouvez en trouver sur des sites spécialisés ou dans des brocantes.",
+        "parent": 28,
+        "upVote": 60,
+        "downVote": 0,
+        "filesPath": []
+    },
+    {
+        "id": 30,
+        "type": "encyclopedia",
+        "title": "Générateur de signal",
+        "by": [{ "id": "13", "name": "Clara" }],
+        "post": "Un générateur de signal est un instrument qui produit un signal électrique de fréquence et d'amplitude variables.",
+        "parent": null,
+        "thumbnail": "./Media/DefaultThumbnail.webp",
+        "filesPath": ["./Encyclopedia/Electronics/SignalGenerator.html"]
     }
 ]

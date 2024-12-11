@@ -4,19 +4,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Antiquodia (Antique Encyclopedia), est un regroupement d’informations sur diverses objets de collections, plus spécifiquement technologiques et anciens.">
         <link href="./Styles/Style.css" rel="stylesheet">
         <link href="./Images/Favicon.ico" rel="icon" />
         <title>Accueil - Antiquodia</title>
-        <script src="./Scripts/UiHandlerScript.js" type="module" defer ></script>
+        <script src="./Scripts/UiHandlerScript.js" defer></script>
+        <script src="/Scripts/SearchFormHandler.js" defer></script>
     </head>
-
     <body>
         <main>
             <section class="frontpagesection">
                 <img class="logolargeimg" src="./Images/LogoLargeColor.webp" alt="Logo de Antiquodia">
             </section>
-
-            <form class="frontpagesection frontpagesection--vertical" action="./Search.html" method="get">
+            <form id="SearchForm" class="frontpagesection frontpagesection--vertical" method="get" action="/recj">
                 <div class="searchbar searchbar--flatbottom boxshadow">
                     <input type="text" name="search" placeholder="Rechercher...">
                     <button class="iconbutton" type="submit"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
@@ -69,7 +69,7 @@
                 <div class="article">
                     Antiquodia (Antique Encyclopedia), est un regroupement d’informations sur diverses objets de collections, plus spécifiquement technologiques et anciens.
                     <br><br>
-                    Archives, encyclopédie, guides et forum spécialisé pour la collection d’objet ancien. En bref, c’est LA ressource pour avoir les ressources.
+                    Actualitées, archives, encyclopédie, guides et forum spécialisé pour la collection d’objet ancien. En bref, c’est LA ressource pour avoir les ressources.
                     <br><br>
                     <hr>
                     

@@ -1,6 +1,6 @@
 const HtmlForm = document.getElementById("LoginFormId");
 
-class Login {
+class LoginClass {
     constructor(Form) {
         this.Form = Form;
         this.Form.addEventListener("submit", (e) => this.Submit(e))
@@ -63,4 +63,4 @@ class Login {
     }
 }
 
-const LoginInstance = new Login(HtmlForm);
+const Login = new LoginClass(HtmlForm);

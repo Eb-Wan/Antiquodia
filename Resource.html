@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antiquodia (Antique Encyclopedia), est un regroupement d’informations sur diverses objets de collections, plus spécifiquement technologiques et anciens.">
+    <link href="./Styles/Style.css" rel="stylesheet">
+    <link href="./Images/Favicon.ico" rel="icon" />
+    <title>Ressource - Antiquodia</title>
+    <script src="/Scripts/UiHandlerScript.js" defer></script>
+    <script src="/Scripts/SearchFormHandler.js" defer></script>
+    <script src="/Scripts/GetResource.js" defer></script>
+</head>
+<body>
+    <form id="SearchForm" class="navbar">
+        <div class="navbar__container">
+            <div class="searchfilters">
+                <span id="FiltersButton" class="searchfilters__text">Filtrer : </span>
+                <div id="FiltersMenu" class="searchfilters__selects">
+                    <select name="type" class="searchfilters__select">
+                        <option value="">Tout Types</option>
+                        <option value="archive">Archives</option>
+                        <option value="encyclopedia">Encyclopédie</option>
+                        <option value="post">Posts</option>
+                        <option value="guide">Guides</option>
+                    </select>
+                    <select name="category" class="searchfilters__select">
+                        <option value="">Toutes Catégorie</option>
+                        <option value="">Électronique</option>
+                        <option value="">Mécanique</option>
+                        <option value="">Autres</option>
+                    </select>
+                    <select name="brand" class="searchfilters__select"><option value="">Toutes Marques</option></select>
+                    <select name="model" class="searchfilters__select"><option value="">Tous Modèles</option></select>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__container">
+            <div class="searchbar">
+                <input type="text" name="search" placeholder="Rechercher...">
+                <button class="iconbutton" type="submit"><img class="icon" src="./Icons/Search.svg" alt="Icône de recherche"></button>
+            </div>
+        </div>
+    </form>
+    <main>
+        <section class="resource">
+            <div id="RessourceContainer" class="article">
+                
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <a class="footer__link" href="">Confidentialité</a>
+            <a class="footer__link" href="">Mentions Légales</a>
+        </div>
+        <div class="footer__container">
+            <img class="footer__logo" src="./Images/LogoColorTransparent.webp" alt="Logo de Antiquodia" width="auto" height="40px">
+        </div>
+    </footer>
+</body>
+</html>

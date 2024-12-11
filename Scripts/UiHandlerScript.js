@@ -1,8 +1,5 @@
 const SmallWidth = 900;
 
-const FiltersBtn = document.getElementById("FiltersButton");
-const FiltersMenu = document.getElementById("FiltersMenu");
-
 /*
     Ceci est une classe qui permet la gestion des menus.
     Menu(OpenButton, Menu, WidthBehaviour)
@@ -150,5 +147,8 @@ class Header {
     }
 }
 
+const FiltersBtn = document.getElementById("FiltersButton");
+const FiltersMenu = document.getElementById("FiltersMenu");
 const FiltersMenuInstance = new Menu(FiltersBtn, FiltersMenu, "LockLarge");
+
 const HeaderInstance = new Header();
