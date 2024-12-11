@@ -25,7 +25,7 @@ class ResourceClass {
         this.HtmlContainer.innerHTML = `
             <h1 class="article__title">${Resource.title}</h1>
             <div class="article__infos"><span>${TypeInfos}</span><span>${Authors}</span></div>
-            <p class="article__contents"><img class="article__leftimg" src="/Images/Placeholder.webp" alt="Un osciloscope (Placeholder Image)">${Resource.post}</p>
+            <p class="article__contents"><img class="article__leftimg" src="/Images/PlaceHolder.webp" alt="Un osciloscope (Placeholder Image)">${Resource.post}</p>
         `;
     }
     GetTypeInfo(Type) {
