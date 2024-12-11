@@ -59,7 +59,7 @@ class LoginClass {
         }
     }
     ToHomePage() {
-        window.location.replace("/Index.html");
+        window.location.replace("/");
     }
 }
 
