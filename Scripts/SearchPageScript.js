@@ -177,21 +177,21 @@ class PaginationClass {
     }
     PageInput (event) {
         if (event.key != "Enter" && event.key != "ArrowUp" && event.key != "ArrowDown") return;
-        let Value = event.target.value;
+        let Value = parseInt(event.target.value);
         if (Value < 1) Value = 1;
-        else if (Value > this.TotalPage) Value = this.TotalPage;
+        if (Value > this.TotalPage) Value = this.TotalPage;
         this.ChangePage(Value);
     }
     PageButton(Direction) {
         let Value = this.CurrentPage + Direction;
         if (Value < 1) Value = 1;
-        else if (Value > this.TotalPage) Value = this.TotalPage;
+        if (Value > this.TotalPage) Value = this.TotalPage;
         this.ChangePage(Value);
     }
     ChangePage(Value = 1) {
-        this.UpdateUi(Value);
-
         this.CurrentPage = Value;
+        this.UpdateUi(Value);
+        
         let Start = (Value - 1) * this.PageLength;
         this.CallBack(Start, Start + this.PageLength);
     }
