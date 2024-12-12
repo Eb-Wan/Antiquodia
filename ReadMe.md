@@ -5,12 +5,13 @@ Actualitées, archives, encyclopédie, guides et forum spécialisé pour la coll
 
 Pour le moment la formation n'a pas entamée le back-end. La plupart des fonctions de site sont donc simulées.
 
+![Lien vers le prototype](https://www.figma.com/proto/VUoDHO1JBJ6oGx9I2BrNzy/Projet-Afec?node-id=0-1&t=NAdOMKwPm5MnAWUc-1)
 
 Dossier Conception:
 
     -Infos sur le site
     -Wireframes/Maquettes
-    -![Lien vers le prototype](https://www.figma.com/proto/VUoDHO1JBJ6oGx9I2BrNzy/Projet-Afec?node-id=0-1&t=NAdOMKwPm5MnAWUc-1)
+    -Liens
     -Charte graphique
     
 Fonctionnalitées (pour le moment):
